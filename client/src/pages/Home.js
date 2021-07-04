@@ -15,6 +15,7 @@ const Home = () => {
 
   const loggedIn = Auth.loggedIn();
 
+  console.log(loggedIn)
   return (
     <main>
       <div className="flex-row justify-space-between">

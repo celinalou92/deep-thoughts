@@ -35,11 +35,22 @@ const authLink = setContext((_, { headers }) => {
   };
 });
 
+// const client = new ApolloClient({
+//   link: authLink.concat(httpLink),
+//   cache: new InMemoryCache(),
+// });
 const client = new ApolloClient({
-  link: authLink.concat(httpLink),
-  cache: new InMemoryCache(),
-});
+  request: operation => {
+    const token = localStorage.getItem('id_token');
 
+    operation.setContext({
+      headers: {
+        authorization: token ? `Bearer ${token}` : ''
+      }
+    });
+  },
+  uri: '/graphql'
+});
 // With the preceding code, we first establish a new link to the GraphQL server at its /graphql endpoint with createHttpLink(). 
 // After we create the link, we use the ApolloClient() constructor to instantiate the Apollo Client instance and create the connection to the API endpoint. We also instantiate a new cache object using new InMemoryCache(). 
 
