@@ -5,11 +5,8 @@ import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@ap
 // So we just imported a few key pieces to the application—let's explain what each will accomplish for us:
 
 // ApolloProvider is a special type of React component that we'll use to provide data to all of the other components.
-
-// ApolloClient is a constructor function that will help initialize the connection to the GraphQL API server.
-
+// ApolloClient is a constructor function that will help initialize the connection to the GraphQL API server.]
 // InMemoryCache enables the Apollo Client instance to cache API response data so that we can perform requests more efficiently.
-
 // createHttpLink allows us to control how the Apollo Client makes a request. Think of it like middleware for the outbound network requests.
 
 import Header from './components/Header';
