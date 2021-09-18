@@ -1,7 +1,7 @@
 ## Deep Thoughts 
 
 ## Description 
-A social media application where the user can post their thoughts on the feed or react and engage in in other discussions. 
+A social media application where the user can post their thoughts on the feed or react and engage in other discussions. 
 
 ![Deep Thoughts](./client/src/components/assets/imgs/screengrab_deepThoughts.png)
 
